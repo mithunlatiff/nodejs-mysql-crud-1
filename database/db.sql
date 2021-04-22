@@ -1,7 +1,7 @@
 -- to create a new database
 
 -- to use database
-use tododb;
+use todo;
 
 -- creating a new table
 CREATE TABLE customer (
