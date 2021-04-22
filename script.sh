@@ -11,6 +11,7 @@ while [ "$HOOK_RETRIES" != 0 ]; do
     fi    
 done
 if [ "$HOOK_RETRIES" == 0 ]; then
+echo "Unable to connect"
 exit 1
 fi
 if mysql -htododb -u$MYSQl_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE < /tmp/db.sql; then 
