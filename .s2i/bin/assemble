@@ -1,3 +1,10 @@
 #!/bin/sh
 echo "this is not the default assemble"
 source ${STI_SCRIPTS_PATH}/assemble
+rc=$?
+if [ $rc -eq 0 ]; then
+    echo "Recording successful build on the life cycle management system..."
+else
+    echo "Not calling the life cycle management system: S2I build failed!"
+fi
+exit $rc
