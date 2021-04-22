@@ -6,7 +6,8 @@ while [ "$HOOK_RETRIES" != 0 ]; do
         echo "Database is up"
         break
         else
-        let HOOK_RETRIES=HOOK_RETRIES - 1
+        echo "Database down"
+        let HOOK_RETRIES=HOOK_RETRIES-1
     fi    
 done
 if [ "$HOOK_RETRIES" == 0 ]; then
