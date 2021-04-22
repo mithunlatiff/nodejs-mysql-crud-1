@@ -3,7 +3,7 @@ HOOK_RETRIES=90
 HOOK_SLEEP=10
 curl -s https://raw.githubusercontent.com/mithunlatiff/nodejs-mysql-crud-1/master/database/db.sql -o /tmp/db.sql
 while [ "$HOOK_RETRIES" != 0 ]; do
-    if mysqlshow -htododb -u$MYSQL_USER -p$MYSQL_PASSWORD -P3306 $MYSQL_DATABASE &>/dev/null; then
+    if mysqlshow -htododb -u$MYSQL_USER -p$MYSQL_PASSWORD -P3306 $MYSQL_DATABASE; then
         echo "Database is up"
         break
         else
