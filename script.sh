@@ -16,7 +16,6 @@ exit 1
 fi
 if mysql -htododb -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE < /tmp/db.sql; then 
 echo "DB Updated success"
-exit 0
 else
 echo "Failed"
 exit 2
