@@ -2,7 +2,7 @@
 HOOK_RETRIES=10000
 curl -s https://raw.githubusercontent.com/mithunlatiff/nodejs-mysql-crud-1/master/database/db.sql -o /tmp/db.sql
 while [ "$HOOK_RETRIES" != 0 ]; do
-    if mysql -htododb -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE &> /dev/null; then
+    if mysqlshow -htododb -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE &>/dev/null; then
         echo "Database is up"
         break
         else
@@ -19,5 +19,5 @@ echo "DB Updated success"
 exit 0
 else
 echo "Failed"
-exit 1
+exit 2
 fi
