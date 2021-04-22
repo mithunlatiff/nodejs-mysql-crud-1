@@ -10,7 +10,7 @@ while [ "$HOOK_RETRIES" != 0 ]; do
         let HOOK_RETRIES=HOOK_RETRIES-1
     fi    
 done
-if [ "$HOOK_RETRIES" == 0 ]; then
+if [ "$HOOK_RETRIES" = 0 ]; then
 echo "Unable to connect"
 exit 1
 fi
