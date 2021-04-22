@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "this is not the default assemble"
+source ${STI_SCRIPTS_PATH}/assemble

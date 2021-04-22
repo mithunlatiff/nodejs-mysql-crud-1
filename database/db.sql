@@ -1,8 +1,7 @@
 -- to create a new database
-CREATE DATABASE nodejs2;
 
 -- to use database
-use nodejs2;
+use tododb;
 
 -- creating a new table
 CREATE TABLE customer (
